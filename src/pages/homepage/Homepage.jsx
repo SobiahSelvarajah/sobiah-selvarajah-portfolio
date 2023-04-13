@@ -3,7 +3,9 @@ import './Homepage.scss';
 
 const Homepage = () => {
     return(
-        <div>izzzame mario</div>
+        <section className="homepage__container">
+            izzzame mario
+        </section>
     );
 };
 
