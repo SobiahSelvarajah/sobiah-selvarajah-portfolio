@@ -1,0 +1,83 @@
+@use '../../partials/breakpoints' as *;
+@use '../../partials/colors' as *;
+@use '../../partials/textstyles' as *;
+@use '../../partials/typeface' as *;
+
+.navbar{
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 10vh;
+        font-family: 'Roboto Medium';
+        background-color: $black;
+        color: $dark_vanilla;
+        @include tablet{
+            padding: 0 50px;
+        }
+        @include desktop{
+            padding: 0 30px;
+        }
+    }
+    &__navlist{
+        display: flex;
+        font-size: $h3_text_size_m;
+        @include tablet{
+            font-size: $h5_text_size_dt;
+        }
+        @include desktop{
+            font-size: $h3_text_size_dt;
+            line-height: $h3_line_height_dt;
+        }
+    }
+    &__navItem{
+        list-style: none;
+        @include tablet{
+            width: 100px;
+        }
+        @include desktop{
+            width: 150px;
+        }
+    }
+    &__navlink{
+        text-decoration: none;
+        color: $dark_vanilla;
+    }
+    &__burger{
+        display: block;
+        cursor: pointer;
+    }
+    &__active,
+    &__dash:nth-child(2){
+        opacity: 0;
+    }
+    &__burger{
+        @include tablet{
+            display: none;
+        }        
+    }
+    &__dash{
+        display: block;
+        background-color: $dark_vanilla;
+        width: 25px;
+        height: 2px;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+    @include mobile{
+        &__navlist{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            right: 100%;
+            height: 90vh;
+            top: 10vh;
+            width: 100%;
+            padding: 0px;
+            background-color: $black;
+            transform: translateX(100%);
+        }
+    }
+}
