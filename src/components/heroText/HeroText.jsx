@@ -1,11 +1,13 @@
 import React from 'react';
-import WelcomeLabel from '../welcomeLabel/WelcomeLabel';
+import HeroLabel from '../heroLabel/HeroLabel';
+import HeroHeading from '../heroHeading/HeroHeading';
 import './HeroText.scss';
 
 export default function HeroText() {
   return (
     <section className='heroText__container'>
-        <WelcomeLabel />
+        <HeroLabel />
+        <HeroHeading />
     </section>
   )
 }

@@ -3,14 +3,19 @@
 @use '../../partials/textstyles' as *;
 @use '../../partials/typeface' as *;
 
-.welcomeLabel{
+.heroLabel{
     &__text{
         font-family: 'Roboto Regular';
         font-size: $h4_text_size_dt;
         line-height: $h4_line_height_dt;
         background-color: $black;
         color: $dark_vanilla;
-        padding: 25px;
+        padding: 15px;
         border-radius: 10px;
+        width: 30%;
+        text-align: center;
+        @include desktop{
+            width: 18%;
+        }
     }
 }
