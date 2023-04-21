@@ -1,0 +1,11 @@
+@use '../../partials/breakpoints' as *;
+@use '../../partials/colors' as *;
+@use '../../partials/textstyles' as *;
+@use '../../partials/typeface' as *;
+
+.hero{
+    &__container{
+        background-color: $dark_vanilla;
+        height: 90vh;
+    }
+}
